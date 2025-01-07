@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Categories - IES Learning Portal</title>
+    <style>
+        /* General Reset */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        header img {
+            width: 150px;
+            height: auto;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 28px;
+        }
+        header nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 16px;
+        }
+        header nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Category Section */
+        .categories {
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .categories h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .category {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .category:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .category img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .category h3 {
+            color: #007BFF;
+            font-size: 20px;
+            margin: 10px 0;
+        }
+        .category p {
+            color: #555;
+            font-size: 14px;
+            margin: 10px 0;
+        }
+        .category button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 14px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .category button:hover {
+            background-color: #218838;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #007BFF;
+            color: white;
+            text-align: center;
+            padding: 10px 20px;
+            margin-top: 20px;
+        }
+        footer p {
+            margin: 0;
+        }
+        footer a {
+            color: #FFC107;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <img src="ies idec logo.png" alt="IES Logo">
+        <h1>IES Learning Portal</h1>
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="products.html">Products</a>
+            <a href="product_cat.html">Categories</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Categories Section -->
+    <div class="categories">
+        <h2>Our Product Categories</h2>
+        <div class="category-grid">
+            <!-- Category 1 -->
+            <div class="category">
+                <img src="https://via.placeholder.com/300x200" alt="Category 1">
+                <h3>Web Development</h3>
+                <p>Explore our wide range of web development courses, from beginner to advanced levels.</p>
+                <button>View Products</button>
+            </div>
+
+            <!-- Category 2 -->
+            <div class="category">
+                <img src="https://via.placeholder.com/300x200" alt="Category 2">
+                <h3>Data Science</h3>
+                <p>Dive into the world of data analysis, machine learning, and AI with our expert-led courses.</p>
+                <button>View Products</button>
+            </div>
+
+            <!-- Category 3 -->
+            <div class="category">
+                <img src="https://via.placeholder.com/300x200" alt="Category 3">
+                <h3>Marketing</h3>
+                <p>Master digital marketing strategies, SEO techniques, and content creation tools.</p>
+                <button>View Products</button>
+            </div>
+
+            <!-- Category 4 -->
+            <div class="category">
+                <img src="https://via.placeholder.com/300x200" alt="Category 4">
+                <h3>Cybersecurity</h3>
+                <p>Learn the skills to protect data and secure systems from cyber threats.</p>
+                <button>View Products</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 IES Learning Portal. All rights reserved. | <a href="privacy.html">Privacy Policy</a></p>
+    </footer>
+
+</body>
+</html>

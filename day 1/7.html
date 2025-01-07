@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Categories</title>
+    <style>
+        /* Basic styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* Container for the list */
+        .category-container {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            width: 300px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .category-container h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        .category {
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+            text-align: center;
+            transition: background-color 0.3s;
+        }
+
+        .category:hover {
+            background-color: #0056b3;
+        }
+
+        /* Sublist hidden by default */
+        .sublist {
+            display: none;
+            margin-top: 10px;
+            list-style-type: none;
+            padding: 0;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .sublist li {
+            padding: 8px;
+            background-color: #fff;
+            border-bottom: 1px solid #ddd;
+            color: #333;
+        }
+
+        .sublist li:last-child {
+            border-bottom: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="category-container">
+        <h2>Categories</h2>
+        <div class="category" onclick="toggleSublist('electronics')">Electronics</div>
+        <ul id="electronics" class="sublist">
+            <a href=""><li>mobile phone</li></a>
+            <a href=""><li>Laptop</li></a>
+            <a href=""><li>camera</li></a>
+        </ul>
+        <div class="category" onclick="toggleSublist('furniture')">Furniture</div>
+        <ul id="furniture" class="sublist">
+            <a href=""><li>Sofa</li></a>
+            <a href=""><li>beds</li></a>
+            <a href=""><li>dining table</li></a>
+        </ul>
+        <div class="category" onclick="toggleSublist('clothing')">Clothing</div>
+        <ul id="clothing" class="sublist">
+            <a href=""><li>mens wear</li></a>
+            <a href=""><li>womens wear</li></a>
+            <a href=""><li>kids wear</li></a>
+        </ul>
+    </div>
+
+    <script>
+        // Function to toggle sublist visibility
+        function toggleSublist(category) {
+            const sublist = document.getElementById(category);
+            const isVisible = sublist.style.display === 'block';
+            // Hide all sublists first
+            document.querySelectorAll('.sublist').forEach(list => list.style.display = 'none');
+            // Toggle the selected sublist
+            sublist.style.display = isVisible ? 'none' : 'block';
+        }
+    </script>
+
+</body>
+</html>

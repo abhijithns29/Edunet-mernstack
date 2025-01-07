@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Categories Navigation</title>
+    <style>
+        /* Basic styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navigation Bar Container */
+        .nav-container {
+            background-color: #333;
+            padding: 10px 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Navigation Items */
+        .nav-item {
+            position: relative;
+            margin: 0 15px;
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+            text-align: center;
+            transition: background-color 0.3s;
+        }
+
+        .nav-item:hover {
+            background-color: #0056b3;
+        }
+
+        /* Hide radio buttons */
+        input[type="radio"] {
+            display: none;
+        }
+
+        /* Sublist hidden by default */
+        .sublist {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            width: 180px;
+            z-index: 1;
+        }
+
+        .sublist li {
+            padding: 10px;
+            color: #333;
+            background-color: #fff;
+            border-bottom: 1px solid #ddd;
+            text-align: left;
+            cursor: pointer;
+        }
+
+        .sublist li:hover {
+            background-color: #f1f1f1;
+        }
+
+        .sublist li:last-child {
+            border-bottom: none;
+        }
+
+        /* Show the sublist when the radio button is checked */
+        input[type="radio"]:checked + .nav-item + .sublist {
+            display: block;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <div class="nav-container">
+        <!-- Electronics Category -->
+        <input type="radio" id="electronics" name="category">
+        <label for="electronics" class="nav-item">Electronics</label>
+        <ul class="sublist">
+            <li>Mobile Phone</li>
+            <li>Laptop</li>
+            <li>Camera</li>
+        </ul>
+
+        <!-- Furniture Category -->
+        <input type="radio" id="furniture" name="category">
+        <label for="furniture" class="nav-item">Furniture</label>
+        <ul class="sublist">
+            <li>Sofa</li>
+            <li>Beds</li>
+            <li>Dining Table</li>
+        </ul>
+
+        <!-- Clothing Category -->
+        <input type="radio" id="clothing" name="category">
+        <label for="clothing" class="nav-item">Clothing</label>
+        <ul class="sublist">
+            <li>Men's Wear</li>
+            <li>Women's Wear</li>
+            <li>Kids' Wear</li>
+        </ul>
+    </div>
+
+</body>
+</html>
