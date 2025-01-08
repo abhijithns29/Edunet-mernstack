@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Productivity App</title>
+  <link rel="stylesheet" href="task1.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Englebert&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1 class="app-title">Productivity App</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#tasks">Tasks</a></li>
+          <li><a href="#calendar">Calendar</a></li>
+          <li><a href="#chat">Collaboration</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Task Management Section -->
+    <section id="tasks" class="section">
+      <div class="container">
+        <h2>Task Management</h2>
+        <ul class="task-list">
+          <li class="task overdue">Overdue: Finish report</li>
+          <li class="task completed">Completed: Submit project proposal</li>
+          <li class="task">Pending: Schedule team meeting</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Calendar Section -->
+    <section id="calendar" class="section">
+      <div class="container">
+        <h2>Calendar</h2>
+        <div class="calendar">
+          <div class="calendar-date current">Today: <span id="current-date"></span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Collaboration Section -->
+    <section id="chat" class="section">
+      <div class="container">
+        <h2>Collaboration</h2>
+        <div class="chat-box">
+          <div class="chat-message user1"><b>User1:</b> Don't forget the meeting at 2 PM.</div>
+          <div class="chat-message user2"><b>User2:</b> Got it, see you there!</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Productivity App | <a href="#">Privacy Policy</a></p>
+    </div>
+  </footer>
+
+  <script >
+    document.addEventListener('DOMContentLoaded', () => {
+  // Set the current date
+  const today = new Date();
+  const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+  document.getElementById('current-date').textContent = today.toLocaleDateString(undefined, options);
+});
+
+  </script>
+</body>
+</html>

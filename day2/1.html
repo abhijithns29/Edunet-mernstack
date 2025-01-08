@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Types Example</title>
+    
+    <!-- Internal CSS -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            color: darkblue;
+            text-align: center;
+        }
+
+        .highlight {
+            background-color: yellow;
+            font-weight: bold;
+        }
+
+        #main-content {
+            padding: 20px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+        }
+    </style>
+
+    <!-- Link to External CSS -->
+    <link rel="stylesheet" href="1.css">
+</head>
+<body>
+    <!-- Inline CSS -->
+    <h1 style="font-size: 2.5rem; text-transform: uppercase;">CSS Types and Selectors</h1>
+
+    <div id="main-content">
+        <p>This is a paragraph demonstrating the use of <strong>CSS selectors</strong> and styles.</p>
+
+        <p class="highlight">This paragraph uses a <span style="color: red;">class selector</span>.</p>
+
+        <p id="special-note">This paragraph is styled using an <strong>ID selector</strong>.</p>
+
+        <p>All <strong>paragraph tags</strong> are styled using the <strong>tag selector</strong>.</p>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 CSS Example Page. All rights reserved.</p>
+    </footer>
+</body>
+</html>

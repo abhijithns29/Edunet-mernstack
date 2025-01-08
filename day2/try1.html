@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Styling Showcase</title>
+    
+    <!-- Internal CSS -->
+    <style>
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            background-color: #f0f4f8;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #003366;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin: 0;
+            text-transform: uppercase;
+        }
+
+        #main-content {
+            max-width: 800px;
+            margin: 40px auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        p {
+            margin-bottom: 20px;
+        }
+
+        .highlight {
+            background-color: #fffae6;
+            color: #856404;
+            border-left: 5px solid #ffc107;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        #special-note {
+            font-style: italic;
+            color: #0056b3;
+        }
+
+        footer {
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: #ffc107;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Button Styles */
+        .button {
+            display: inline-block;
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            text-transform: uppercase;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+        }
+    </style>
+
+    <!-- Link to External CSS -->
+    <link rel="stylesheet" href="1.css">
+</head>
+<body>
+    <header>
+        <h1>CSS Styling Showcase</h1>
+    </header>
+
+    <div id="main-content">
+        <p>Welcome to this professional and beautiful demonstration of various CSS types and selectors.</p>
+
+        <p class="highlight">This is a highlighted paragraph using a <span style="font-weight: bold; color: #856404;">class selector</span>. It stands out with a light yellow background and a bold accent border.</p>
+
+        <p id="special-note">This paragraph is styled using an <strong>ID selector</strong> and has a unique italicized design with a blue accent.</p>
+
+        <p>All <strong>paragraph tags</strong> are styled uniformly using the <strong>tag selector</strong> to maintain consistency.</p>
+
+        <a href="#" class="button">Learn More</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 CSS Styling Showcase. All rights reserved. | <a href="#">Privacy Policy</a></p>
+    </footer>
+</body>
+</html>

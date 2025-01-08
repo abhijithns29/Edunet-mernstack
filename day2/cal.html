@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exact Calendar</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: 100vh;
+    }
+
+    .calendar-container {
+      text-align: center;
+      width: 100%;
+      max-width: 900px;
+    }
+
+    h1 {
+      color: #0044cc;
+      margin-bottom: 10px;
+    }
+
+    .date-info {
+      margin-bottom: 20px;
+      font-size: 1.2em;
+      color: #444;
+    }
+
+    .calendar {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 5px;
+      background-color: #ffffff;
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .calendar-header {
+      font-weight: bold;
+      background-color: #1976d2;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    .calendar-day {
+      text-align: center;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-size: 1em;
+      color: #333;
+      background-color: #f9f9f9;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .calendar-day.current {
+      background-color: #0044cc;
+      color: #fff;
+      font-weight: bold;
+    }
+
+    .calendar-day.empty {
+      background-color: transparent;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="calendar-container">
+    <h1>Dynamic Calendar</h1>
+    <div class="date-info" id="current-date"></div>
+    <div class="calendar" id="calendar">
+      <!-- Calendar will be dynamically generated -->
+    </div>
+  </div>
+
+  <script>
+    window.onload = function () {
+      const today = new Date();
+      const currentDay = today.getDate();
+      const currentMonth = today.toLocaleString('default', { month: 'long' });
+      const currentYear = today.getFullYear();
+      const currentWeekday = today.toLocaleString('default', { weekday: 'long' });
+
+      // Display the current date info
+      const dateInfo = document.getElementById('current-date');
+      dateInfo.textContent = `Today is ${currentWeekday}, ${currentMonth} ${currentDay}, ${currentYear}`;
+
+      // Calendar grid
+      const calendar = document.getElementById('calendar');
+
+      // Weekday headers
+      const weekdays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+      weekdays.forEach(day => {
+        const header = document.createElement('div');
+        header.classList.add('calendar-header');
+        header.textContent = day;
+        calendar.appendChild(header);
+      });
+
+      // Get the first day of the month
+      const firstDay = new Date(currentYear, today.getMonth(), 1).getDay();
+
+      // Get the total days in the month
+      const totalDays = new Date(currentYear, today.getMonth() + 1, 0).getDate();
+
+      // Generate empty boxes for days before the first day of the month
+      for (let i = 0; i < firstDay; i++) {
+        const emptyDay = document.createElement('div');
+        emptyDay.classList.add('calendar-day', 'empty');
+        calendar.appendChild(emptyDay);
+      }
+
+      // Generate days of the month
+      for (let day = 1; day <= totalDays; day++) {
+        const dayElement = document.createElement('div');
+        dayElement.classList.add('calendar-day');
+        dayElement.textContent = day;
+
+        // Highlight the current day
+        if (day === currentDay) {
+          dayElement.classList.add('current');
+        }
+
+        calendar.appendChild(dayElement);
+      }
+    };
+  </script>
+</body>
+</html>
