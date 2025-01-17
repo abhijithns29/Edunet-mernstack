@@ -1,0 +1,13 @@
+[2025-01-16 04:53:37] Error: Sample error message for testing.
+Stack Trace:
+Error: Sample error message for testing.
+    at Object.<anonymous> (C:\Users\user\Desktop\mern stack\day 9\2.js:24:11)
+    at Module._compile (node:internal/modules/cjs/loader:1565:14)
+    at Object..js (node:internal/modules/cjs/loader:1708:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:219:24)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:170:5)
+    at node:internal/main/run_main_module:36:49
+
